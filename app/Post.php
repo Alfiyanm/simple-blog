@@ -7,4 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     //
+    public function getImageUrlAttribute($value)
+    {
+        $imageurl = "";
+
+        if ( ! is_null($this->image))
+        {
+            $imagePath = public_path() . "/img/" . $this->image;
+            if (file_exists($imagePath)) $imageurl = asset("/img/" . $this->image);
+        }
+        return $imageurl;
+    }
 }
