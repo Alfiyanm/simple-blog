@@ -23,4 +23,10 @@ class Post extends Model
         }
         return $imageurl;
     }
+
+    //
+    public function getDateAttribute($value)
+    {
+        return $this->created_at->diffForHumans();
+    }
 }
