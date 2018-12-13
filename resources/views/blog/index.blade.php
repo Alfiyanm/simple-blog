@@ -11,13 +11,13 @@
                     <article class="post-item">
                         <div class="post-item-image">
                             <a href="post.html">
-                                <img src="/img/Post_Image_1.jpg" alt="">
+                                <img src="/img/{{ $post->image }}" alt="">
                             </a>
                         </div>
                         <div class="post-item-body">
                             <div class="padding-10">
-                                <h2><a href="post.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptas, blanditiis impedit repellat harum, eaque saepe aspernatur quo magnam obcaecati dolor! Deleniti quod repellendus non iste architecto, voluptate excepturi velit.</p>
+                                <h2><a href="post.html">{{ $post->title }}</a></h2>
+                                <p>{{ $post->excerpt }}</p>
                             </div>
 
                             <div class="post-meta padding-10 clearfix">
