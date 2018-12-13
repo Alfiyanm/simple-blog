@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('author')->orderBy('created_at', 'desc')->get();
+        $posts = Post::with('author')->latestFirst()->get();
         return view("blog.index", compact('posts'));
     }
 }

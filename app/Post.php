@@ -29,4 +29,10 @@ class Post extends Model
     {
         return $this->created_at->diffForHumans();
     }
+
+    //
+    public function scopeLatestFirst($query)
+    {
+        return $this->orderBy('created_at', 'desc');
+    }
 }
