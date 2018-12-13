@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('author')->get();
         return view("blog.index", compact('posts'));
     }
 }
